@@ -1,0 +1,666 @@
+/* ========================================
+   TECHSTORE - TEMA GAMING
+   Adaptado al HTML actual de TechStore
+   Bootstrap 5 se mantiene como framework
+======================================== */
+
+/* 1. CONFIGURACIÓN GENERAL */
+:root {
+    --gaming-black: #080a10;
+    --gaming-dark: #11141d;
+    --gaming-panel: #171b26;
+    --gaming-border: #2b3040;
+    --gaming-red: #ed2635;
+    --gaming-red-dark: #bd1728;
+    --gaming-white: #f5f6fa;
+    --gaming-muted: #b5bac7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--gaming-black);
+    color: var(--gaming-white);
+}
+
+/* 2. BARRA DE NAVEGACIÓN */
+.navbar {
+    padding: 13px 0;
+    background: linear-gradient(90deg, #080a10, #151923) !important;
+    border-bottom: 1px solid #292d38;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, .35);
+}
+
+.navbar-brand {
+    color: #fff !important;
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: .3px;
+}
+
+.navbar-brand i {
+    color: var(--gaming-red);
+    margin-right: 6px;
+}
+
+.nav-link {
+    color: #e5e7eb !important;
+    margin-left: 12px;
+    font-size: 14px;
+    transition: color .25s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--gaming-red) !important;
+}
+
+.navbar .btn-primary {
+    border-radius: 8px;
+}
+
+/* 3. BANNER PRINCIPAL */
+.hero-section {
+    position: relative;
+    overflow: hidden;
+    padding: 70px 0;
+    color: white;
+    background:
+        radial-gradient(ellipse at 76% 48%, rgba(132, 17, 47, .35), transparent 43%),
+        linear-gradient(115deg, #080a10 0%, #141722 62%, #260d19 100%);
+    border-bottom: 1px solid #292d38;
+}
+
+.hero-section .badge {
+    background: linear-gradient(90deg, #f12b3b, #a91125) !important;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, .18);
+    border-radius: 30px;
+    padding: 8px 15px;
+    font-size: 11px;
+    letter-spacing: .8px;
+    text-transform: uppercase;
+    box-shadow: 0 0 15px rgba(237, 38, 53, .3);
+}
+
+.hero-section h1 {
+    color: white;
+    font-size: clamp(36px, 4.2vw, 54px);
+    font-weight: 900;
+    line-height: 1.08;
+    letter-spacing: -1.2px;
+    margin: 4px 0 18px;
+}
+
+.hero-section h1 span {
+    color: var(--gaming-red);
+}
+
+.hero-section p {
+    color: #c5c8d1;
+    font-size: 16px;
+    line-height: 1.65;
+    margin-bottom: 24px;
+}
+
+.hero-section .btn-primary {
+    padding: 12px 23px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #f12b3b, #b91425);
+    border: none;
+    color: white;
+    font-weight: 700;
+    transition: .25s ease;
+}
+
+.hero-section .btn-primary:hover {
+    background: linear-gradient(135deg, #ff4050, #c8172a);
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(237, 38, 53, .4);
+}
+
+.hero-image {
+    width: 100%;
+    max-height: 390px;
+    object-fit: contain;
+    border-radius: 10px;
+    filter: drop-shadow(0 12px 25px rgba(0, 0, 0, .5));
+    transition: transform .35s ease;
+}
+
+.hero-image:hover {
+    transform: scale(1.025);
+}
+
+/* 4. TÍTULOS DE SECCIÓN */
+section h2 {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+section .text-center p {
+    color: var(--gaming-muted);
+}
+
+/* 5. CATEGORÍAS */
+.category-card {
+    width: 100%;
+    height: 100%;
+    padding: 28px 15px;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(145deg, #191d28, #10131b);
+    border: 1px solid var(--gaming-border);
+    border-radius: 14px;
+    transition: all .3s ease;
+}
+
+.category-card i {
+    display: block;
+    color: var(--gaming-red);
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.category-card h5 {
+    color: white;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.category-card p {
+    color: var(--gaming-muted);
+    margin-bottom: 0;
+}
+
+.category-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--gaming-red);
+    box-shadow: 0 10px 25px rgba(237, 38, 53, .14);
+}
+
+/* 6. BUSCADOR Y FILTROS */
+#buscador,
+#filtroCategoria,
+.input-group .form-control {
+    padding: 12px;
+    color: white;
+    background-color: #171b26;
+    border: 1px solid #343a49;
+    border-radius: 8px;
+}
+
+#buscador::placeholder {
+    color: #9298a7;
+}
+
+#buscador:focus,
+#filtroCategoria:focus,
+.input-group .form-control:focus {
+    color: white;
+    background-color: #171b26;
+    border-color: var(--gaming-red);
+    box-shadow: 0 0 0 3px rgba(237, 38, 53, .13);
+}
+
+#filtroCategoria option {
+    color: white;
+    background: #171b26;
+}
+
+.input-group-text {
+    color: var(--gaming-red);
+    background: #171b26;
+    border-color: #343a49;
+}
+
+/* 7. TARJETAS DE PRODUCTOS */
+.product-card {
+    height: 100%;
+    overflow: hidden;
+    color: white;
+    background: linear-gradient(145deg, #191d28, #10131b);
+    border: 1px solid var(--gaming-border);
+    border-radius: 14px;
+    transition: all .3s ease;
+    animation: aparecerProducto .4s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--gaming-red);
+    box-shadow: 0 12px 28px rgba(237, 38, 53, .14);
+}
+
+.product-image {
+    width: 100%;
+    height: 210px;
+    object-fit: contain;
+    padding: 15px;
+    background: #fff;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-info h5 {
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    color: var(--gaming-muted);
+    font-size: 14px;
+}
+
+.product-price {
+    color: var(--gaming-red);
+    font-size: 21px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.product-info .btn-primary,
+.btn-agregar {
+    width: 100%;
+    padding: 10px;
+    color: white;
+    background: linear-gradient(135deg, #f12b3b, #b91425);
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: .25s ease;
+}
+
+.product-info .btn-primary:hover,
+.btn-agregar:hover {
+    background: var(--gaming-red-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(237, 38, 53, .3);
+}
+
+.btn-agregado {
+    color: white !important;
+    background: #168548 !important;
+    border-color: #168548 !important;
+    transform: scale(1.02);
+}
+
+.btn-agregado i {
+    margin-right: 5px;
+}
+
+/* 8. BOTÓN VER DETALLES */
+.btn-detalles {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 9px;
+    color: white;
+    background: transparent;
+    border: 1px solid #555c6b;
+    border-radius: 8px;
+    transition: .25s ease;
+}
+
+.btn-detalles:hover {
+    color: var(--gaming-red);
+    border-color: var(--gaming-red);
+    background: rgba(237, 38, 53, .06);
+}
+
+/* 9. VENTANAS MODALES */
+.modal-content {
+    overflow: hidden;
+    color: white;
+    background: #151923;
+    border: 1px solid #343a49;
+    border-radius: 14px;
+}
+
+.modal-header {
+    padding: 18px;
+    color: white;
+    background: #10141e;
+    border-bottom: 1px solid #343a49;
+}
+
+.modal-title {
+    color: white;
+    font-weight: 700;
+}
+
+.modal-header .btn-close {
+    filter: invert(1);
+}
+
+.modal-body {
+    padding: 25px;
+    color: #e5e7eb;
+}
+
+.modal-footer {
+    border-top: 1px solid #343a49;
+}
+
+.modal-content .text-muted {
+    color: #aeb5c3 !important;
+}
+
+.modal-content .form-label {
+    color: #d5d8e0;
+}
+
+.modal-content .form-control,
+.modal-content .form-select {
+    color: white;
+    background-color: #0d1018;
+    border: 1px solid #3a4050;
+}
+
+.modal-content .form-control::placeholder {
+    color: #858c9b;
+}
+
+.modal-content .form-control:focus,
+.modal-content .form-select:focus {
+    color: white;
+    background-color: #0d1018;
+    border-color: var(--gaming-red);
+    box-shadow: 0 0 0 3px rgba(237, 38, 53, .13);
+}
+
+.modal-content .form-select option {
+    color: white;
+    background: #151923;
+}
+
+/* Botones Bootstrap */
+.btn-primary {
+    color: white;
+    background: linear-gradient(135deg, #f12b3b, #b91425);
+    border: none;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    color: white;
+    background: #bd1728;
+    border: none;
+}
+
+.btn-secondary {
+    color: white;
+    background: #414858;
+    border-color: #414858;
+}
+
+.btn-secondary:hover {
+    background: #535d70;
+    border-color: #535d70;
+}
+
+/* 10. CARRITO */
+#contenidoCarrito {
+    color: white;
+}
+
+#totalCarrito,
+#totalPago {
+    color: var(--gaming-red);
+    font-weight: 800;
+}
+
+/* 11. DETALLES DEL PRODUCTO */
+.detalle-imagen {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+}
+
+#detalleNombre {
+    color: white;
+    font-weight: 800;
+}
+
+#detalleDescripcion {
+    color: var(--gaming-muted);
+}
+
+#detallePrecio {
+    color: var(--gaming-red);
+    font-weight: 800;
+}
+
+#detalleEspecificaciones {
+    padding-left: 20px;
+    color: #c5c8d1;
+}
+
+#detalleEspecificaciones li {
+    margin-bottom: 8px;
+}
+
+/* 12. VENTANA DE PAGO */
+.payment-total {
+    padding: 20px;
+    margin-bottom: 25px;
+    text-align: center;
+    background: #202634;
+    border: 1px solid #343a49;
+    border-radius: 12px;
+}
+
+.payment-total p {
+    color: var(--gaming-muted);
+    margin-bottom: 5px;
+}
+
+.payment-total h2 {
+    color: var(--gaming-red);
+    font-weight: 800;
+    margin: 0;
+}
+
+#formularioYape .text-primary {
+    color: var(--gaming-red) !important;
+}
+
+/* Aviso si el bloque existe en el HTML */
+.demo-notice {
+    color: #ffd7a8;
+    background: #392719;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+/* 13. COMPRA EXITOSA */
+.success-icon {
+    width: 85px;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    color: #36d889;
+    background: #123c28;
+    border-radius: 50%;
+    font-size: 48px;
+    animation: successAnimation .5s ease;
+}
+
+#modalExito .modal-content {
+    border-radius: 18px;
+}
+
+#modalExito h3 {
+    color: white;
+}
+
+.purchase-details {
+    padding: 18px;
+    color: #e5e7eb;
+    background: #202634;
+    border-radius: 12px;
+}
+
+.purchase-details p {
+    color: #d1d5df;
+    margin-bottom: 12px;
+}
+
+.purchase-details p:last-child {
+    margin-bottom: 0;
+}
+
+#modalExito hr {
+    border-color: #414858;
+}
+
+/* 14. PIE DE PÁGINA */
+footer {
+    padding-top: 35px;
+    margin-top: 70px;
+    color: white;
+    background: #080a10 !important;
+    border-top: 1px solid #292d38;
+}
+
+footer h4 {
+    color: white;
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+footer h4 i {
+    color: var(--gaming-red);
+}
+
+footer p {
+    color: #b5bac7;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+footer hr {
+    border-color: #475569;
+}
+
+/* 15. ANIMACIONES */
+@keyframes aparecerProducto {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes agregadoAnimacion {
+    0% { transform: scale(1); }
+    40% { transform: scale(1.12); }
+    100% { transform: scale(1); }
+}
+
+.animacion-agregado {
+    animation: agregadoAnimacion .4s ease;
+}
+
+@keyframes successAnimation {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    70% {
+        transform: scale(1.15);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* 16. DISEÑO RESPONSIVE */
+@media (max-width: 991px) {
+    .hero-section {
+        padding: 55px 0;
+        text-align: center;
+    }
+
+    .hero-section h1 {
+        font-size: 38px;
+    }
+
+    .hero-image {
+        margin-top: 30px;
+        max-height: 330px;
+    }
+
+    .navbar .btn-primary {
+        margin-top: 15px;
+        margin-left: 0 !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        padding: 42px 0;
+    }
+
+    .hero-section h1 {
+        font-size: 31px;
+    }
+
+    .hero-section p {
+        font-size: 15px;
+    }
+
+    section h2 {
+        font-size: 25px;
+    }
+
+    .product-image {
+        height: 180px;
+    }
+
+    .category-card {
+        padding: 22px 12px;
+    }
+
+    .modal-body {
+        padding: 18px;
+    }
+}
+
+/* 17. ACCESIBILIDAD */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

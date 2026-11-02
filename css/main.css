@@ -1,0 +1,108 @@
+/* ========================================
+   ESTILOS GENERALES Y VARIABLES
+======================================== */
+
+:root {
+    --gaming-black: #FFFFFF;
+    --gaming-dark: #EAF3FF;
+    --gaming-panel: #F1F6FF;
+    --gaming-border: #D5E3F7;
+    --gaming-red: #2463EB;
+    --gaming-red-dark: #174BC0;
+    --gaming-white: #142B59;
+    --gaming-muted: #64748B;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--gaming-black);
+    color: var(--gaming-white);
+}
+
+/* BARRA DE NAVEGACIÓN */
+.navbar {
+    padding: 13px 0;
+    background: linear-gradient(90deg, #080a10, #151923) !important;
+    border-bottom: 1px solid #292d38;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, .35);
+}
+
+.navbar-brand {
+    color: #fff !important;
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: .3px;
+}
+
+.navbar-brand i {
+    color: var(--gaming-red);
+    margin-right: 6px;
+}
+
+.nav-link {
+    color: #e5e7eb !important;
+    margin-left: 12px;
+    font-size: 14px;
+    transition: color .25s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--gaming-red) !important;
+}
+
+.navbar .btn-primary {
+    border-radius: 8px;
+}
+
+/* PIE DE PÁGINA */
+footer {
+    padding-top: 35px;
+    margin-top: 70px;
+    color: white;
+    background: #080a10 !important;
+    border-top: 1px solid #292d38;
+}
+
+footer h4 {
+    color: white;
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+footer h4 i {
+    color: var(--gaming-red);
+}
+
+footer p {
+    color: #b5bac7;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+footer hr {
+    border-color: #475569;
+}
+
+
+/* TEMA UNIFICADO AZUL Y BLANCO */
+body { background: #FFFFFF; color: #142B59; }
+.navbar { background: #FFFFFF !important; border-bottom: 1px solid #D5E3F7; box-shadow: 0 3px 14px rgba(20,43,89,.06); }
+.navbar-brand, .navbar .nav-link { color: #142B59 !important; }
+.navbar-brand i, footer h4 i { color: #2463EB; }
+.navbar .nav-link:hover, .navbar .nav-link.active { color: #2463EB !important; }
+footer { background: #EAF3FF !important; color: #142B59 !important; border-top: 1px solid #D5E3F7; }
+footer h4 { color: #142B59; }
+footer p { color: #64748B; }
+footer hr { border-color: #D5E3F7; }

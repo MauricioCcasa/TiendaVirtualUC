@@ -1,0 +1,102 @@
+/* ========================================
+   RESPONSIVE Y ANIMACIONES
+======================================== */
+
+@keyframes aparecerProducto {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes agregadoAnimacion {
+    0% { transform: scale(1); }
+    40% { transform: scale(1.12); }
+    100% { transform: scale(1); }
+}
+
+.animacion-agregado {
+    animation: agregadoAnimacion .4s ease;
+}
+
+@keyframes successAnimation {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    70% {
+        transform: scale(1.15);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* TABLETS */
+@media (max-width: 991px) {
+    .hero-section {
+        padding: 55px 0;
+        text-align: center;
+    }
+
+    .hero-section h1 {
+        font-size: 38px;
+    }
+
+    .hero-image {
+        margin-top: 30px;
+        max-height: 330px;
+    }
+
+    .navbar .btn-primary {
+        margin-top: 15px;
+        margin-left: 0 !important;
+    }
+}
+
+/* CELULARES */
+@media (max-width: 576px) {
+    .hero-section {
+        padding: 42px 0;
+    }
+
+    .hero-section h1 {
+        font-size: 31px;
+    }
+
+    .hero-section p {
+        font-size: 15px;
+    }
+
+    section h2 {
+        font-size: 25px;
+    }
+
+    .product-image {
+        height: 180px;
+    }
+
+    .category-card {
+        padding: 22px 12px;
+    }
+
+    .modal-body {
+        padding: 18px;
+    }
+}
+
+/* ACCESIBILIDAD: REDUCIR MOVIMIENTO */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
